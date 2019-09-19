@@ -1,0 +1,38 @@
+.login {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo image {
+  width: 294rpx;
+  height: 294rpx;
+}
+
+.form {
+  width: 100%;
+}
+
+.form input {
+  height: 100rpx;
+  border-top: 2rpx solid #EFEFEF;
+  border-bottom: 2rpx solid #EFEFEF;
+  padding: 0 20rpx;
+}
+
+.form input:nth-child(1) {
+  border-bottom: none;
+}
+
+.form button {
+  color: #fff;
+  background-color: #3281FF;
+  margin-top: 100rpx;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 80rpx;
+  color: #3281FF;
+}

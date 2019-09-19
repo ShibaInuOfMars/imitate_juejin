@@ -1,0 +1,13 @@
+<view class="login">
+  <view class="logo">
+    <image src="/assets/img/ic_login_logo.png" />
+  </view>
+  <view class="form">
+    <input placeholder="手机号/邮箱" />
+    <input placeholder="密码" password />
+    <button>登录</button>
+  </view>
+  <view class="copyright">
+    掘金·juejin.im
+  </view>
+</view>

@@ -43,9 +43,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/mine/mine",
+					"id": 0,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,5 +1,5 @@
 <!-- 头像及信息 -->
-<view class="headSculpture">
+<view class="headSculpture" bindtap="jumpToLogin">
   <view class="userInfo">
     <image class="userImage" src="/assets/img/empty_avatar_user.png" />
     <view class="someText">
@@ -14,7 +14,7 @@
 <view class="listFunc">
   <mine-cell functionIcon="/assets/img/ic_notification.png" functionText="消息中心" megCount="0" special-text="specialText" />
   <mine-cell functionIcon="/assets/img/ic_heart_entry_bottom_full.png" functionText="我喜欢的" megCount="0" />
-  <mine-cell functionIcon="/assets/img/ic_collection_set.png" functionText="收藏集" megCount="0" />
+  <mine-cell functionIcon="/assets/img/ic_collection_set.png" functionText="收藏集" megCount="0个" />
   <mine-cell functionIcon="/assets/img/user_buy.png" functionText="已购小册" megCount="0" />
   <mine-cell functionIcon="/assets/img/user_liked_pin.png" functionText="赞过的沸点" megCount="0" />
   <mine-cell functionIcon="/assets/img/view.png" functionText="阅读过的文章" megCount="0" />
