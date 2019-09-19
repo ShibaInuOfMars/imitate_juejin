@@ -1,12 +1,54 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/dynamic/dynamic",
+    "pages/search/search",
+    "pages/brochure/brochure",
+    "pages/mine/mine"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0C85FF",
+    "navigationBarTitleText": "掘金",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F4F6F9"
+  },
+  "tabBar": {
+    "color": "#71777C",
+    "selectedColor": "#0C85FF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/assets/img/tab_home_normal.png",
+        "selectedIconPath": "/assets/img/tab_home.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "动态",
+        "iconPath": "/assets/img/tab_activity_normal.png",
+        "selectedIconPath": "/assets/img/tab_activity.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "/assets/img/tab_explore_normal.png",
+        "selectedIconPath": "/assets/img/tab_explore.png"
+      },
+      {
+        "pagePath": "pages/brochure/brochure",
+        "text": "小册",
+        "iconPath": "/assets/img/tab_xiaoce_normal.png",
+        "selectedIconPath": "/assets/img/tab_xiaoce.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/assets/img/tab_profile_normal.png",
+        "selectedIconPath": "/assets/img/tab_profile.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
