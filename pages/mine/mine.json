@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "mine-cell": "/components/mineCell/mineCell"
+  },
+  "navigationBarTitleText": "我的"
 }

@@ -1,0 +1,9 @@
+<view class="functionList" hover-class="hoverStyle">
+  <view class="listLeft">
+    <image src="{{functionIcon}}" />
+    <text>{{functionText}}</text>
+  </view>
+  <view class="special-text listRight">
+    {{megCount}}
+  </view>
+</view>

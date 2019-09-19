@@ -1,1 +1,60 @@
-/* pages/mine/mine.wxss */
+page {
+  background: #F4F6F9;
+}
+
+.headSculpture {
+  background-color: #fff;
+  padding: 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.headSculpture .userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.headSculpture .userInfo .userImage {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.headSculpture .userInfo .someText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.headSculpture .userInfo .someText text:nth-child(1) {
+  font-size: 36rpx;
+}
+
+.headSculpture .userInfo .someText text:nth-child(2) {
+  font-size: 28rpx;
+  color: #71777C;
+}
+
+.headSculpture .more {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.listFunc {
+  margin-top: 20rpx;
+}
+
+page .listFunc:last-child {
+  margin-bottom: 20rpx;
+}
+
+.specialText {
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: red;
+  color: #fff !important;
+  padding: 0 14rpx;
+  border-radius: 20rpx;
+}

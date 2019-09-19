@@ -1,2 +1,28 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!-- 头像及信息 -->
+<view class="headSculpture">
+  <view class="userInfo">
+    <image class="userImage" src="/assets/img/empty_avatar_user.png" />
+    <view class="someText">
+      <text>登录/注册</text>
+      <text>添加职位 @ 添加公司</text>
+    </view>
+  </view>
+  <image class="more" src="/assets/img/profile_arrow.png" />
+</view>
+
+<!-- 功能列表 -->
+<view class="listFunc">
+  <mine-cell functionIcon="/assets/img/ic_notification.png" functionText="消息中心" megCount="0" special-text="specialText" />
+  <mine-cell functionIcon="/assets/img/ic_heart_entry_bottom_full.png" functionText="我喜欢的" megCount="0" />
+  <mine-cell functionIcon="/assets/img/ic_collection_set.png" functionText="收藏集" megCount="0" />
+  <mine-cell functionIcon="/assets/img/user_buy.png" functionText="已购小册" megCount="0" />
+  <mine-cell functionIcon="/assets/img/user_liked_pin.png" functionText="赞过的沸点" megCount="0" />
+  <mine-cell functionIcon="/assets/img/view.png" functionText="阅读过的文章" megCount="0" />
+  <mine-cell functionIcon="/assets/img/tag.png" functionText="标签管理" megCount="0" />
+</view>
+
+<view class="listFunc">
+  <mine-cell functionIcon="/assets/img/icon_feed_back.png" functionText="意见反馈" />
+  <mine-cell functionIcon="/assets/img/settings.png" functionText="设置" />
+  <mine-cell functionIcon="/assets/img/qrcode.png" functionText="小程序码" />
+</view>

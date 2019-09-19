@@ -1,0 +1,31 @@
+.functionList {
+  background-color: #fff;
+  padding: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #EFEFEF;
+}
+
+.functionList .listLeft {
+  display: flex;
+  align-items: center;
+}
+
+.functionList .listLeft image {
+  width: 40rpx;
+  height: 40rpx; 
+}
+
+.functionList .listLeft text {
+  margin-left: 40rpx;
+}
+
+.functionList .listRight {
+  color: #71777C;
+  font-size: 24rpx;
+}
+
+.hoverStyle {
+  background-color: #f2f2f2;
+}
