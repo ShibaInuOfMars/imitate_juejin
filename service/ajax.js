@@ -9,7 +9,7 @@ function myAjax(options) {
 
   return new Promise((resolve, reject) => {
     wx.request({
-      url: url,
+      url: options.url,
       data: options.data,
       method: options.method,
       success: (res) => {
