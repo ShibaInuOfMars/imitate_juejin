@@ -1,0 +1,11 @@
+// 将无法加载的图片换成默认图片
+var changImageSrc = function (src) {
+  if (!src) {
+    return '/assets/img/default_user.jpg';
+  }
+  if (src.indexOf('?w=') !== -1) {
+    return '/assets/img/default_user.jpg';
+  } else {
+    return src;
+  }
+};
