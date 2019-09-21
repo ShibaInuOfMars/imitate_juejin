@@ -1,5 +1,5 @@
 // 将无法加载的图片换成默认图片
-var changImageSrc = function (src) {
+function changeImageSrc(src) {
   if (!src) {
     return '/assets/img/default_user.jpg';
   }
@@ -8,4 +8,8 @@ var changImageSrc = function (src) {
   } else {
     return src;
   }
+};
+
+module.exports = {
+  changeImageSrc: changeImageSrc
 };

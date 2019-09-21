@@ -1,7 +1,10 @@
+<wxs module="filter" src="./../../filter/filter.wxs"></wxs>
+
 <!-- 头像及信息 -->
 <view class="headSculpture" bindtap="jumpToLogin">
   <view class="userInfo">
-    <image class="userImage" src="{{userInfo.avatarLarge || '/assets/img/empty_avatar_user.png'}}" />
+    <image class="userImage" src="{{filter.changeImageSrc(userInfo.avatarLarge)}}" wx:if="{{userInfo.avatarLarge}}"/>
+    <image class="userImage" src="/assets/img/empty_avatar_user.png" wx:else />
     <view class="someText">
       <text>{{userInfo.username || "登录/注册"}}</text>
       <text>{{userInfo.jobTitle || "添加职位"}} @ {{userInfo.company || "添加公司"}}</text>
