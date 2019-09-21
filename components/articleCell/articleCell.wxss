@@ -90,6 +90,10 @@
   margin-left: 10rpx;
 }
 
+.hover-class {
+  background: #f2f2f2 !important;
+}
+
 /* .content .title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
