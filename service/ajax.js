@@ -16,7 +16,9 @@ function myAjax(options) {
         resolve(res);
       },
       fail: (err) => {
-        reject(err);
+        wx.showToast({
+          title: '网络异常，请稍后再试',
+        });
       }
     });
   });

@@ -27,6 +27,38 @@ let userLogin = (type, params) => {
   }
 };
 
+// 用户信息获取
+let INFO_BASE = 'https://user-storage-api-ms.juejin.im/v1';
+let getUserInfo = (url, params) => {
+  return myAjax({
+    url: INFO_BASE + url,
+    data: {
+      src: params.src, 
+      device_id: params.device_id, 
+      uid: params.uid, 
+      token: params.token, 
+      current_uid: params.current_uid
+    },
+    method: 'GET'
+  });
+};
+
+// 消息中心消息条数
+let MSG_BASE = 'https://ufp-api-ms.juejin.im/v1';
+let getUserMsgCount = (url, params) => {
+  return myAjax({
+    url: MSG_BASE + url,
+    data: {
+      src: params.src, 
+      uid: params.uid, 
+      token: params.token
+    },
+    method: 'GET'
+  });
+};
+
 module.exports = {
-  userLogin: userLogin
+  userLogin: userLogin,
+  getUserInfo: getUserInfo,
+  getUserMsgCount: getUserMsgCount
 };
