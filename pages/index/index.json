@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "article-cell": "/components/articleCell/articleCell"
+  }
 }

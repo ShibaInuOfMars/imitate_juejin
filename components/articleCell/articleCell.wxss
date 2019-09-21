@@ -1,0 +1,90 @@
+.article-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.article-wrapper .top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18rpx;
+}
+
+.article-wrapper .top-wrapper .user {
+  display: flex;
+  align-items: center;
+}
+
+.article-wrapper .top-wrapper .user image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.article-wrapper .top-wrapper .user text {
+  margin-left: 20rpx;
+}
+
+.article-wrapper .top-wrapper .category {
+  color: #71777C;
+}
+
+.article-wrapper .center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.article-wrapper .center-wrapper .article {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-wrapper .center-wrapper .article .title {
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+
+.article-wrapper .center-wrapper .article .desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #abb4bf;
+  font-size: 30rpx;
+}
+
+.article-wrapper .center-wrapper image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.article-wrapper .bottom-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #abb4bf;
+}
+
+.article-wrapper .bottom-wrapper > view {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.article-wrapper .bottom-wrapper > view > text {
+  margin-left: 6rpx;
+}
+
+.article-wrapper .bottom-wrapper > view > image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.article-wrapper .bottom-wrapper .comment {
+  margin-left: 10rpx;
+}

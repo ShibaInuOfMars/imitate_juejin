@@ -1,0 +1,28 @@
+<view class="article-wrapper">
+  <view class="top-wrapper">
+    <view class="user">
+      <image src="/assets/img/default_user.jpg"></image>
+      <text>xx</text>
+    </view>
+    <view class="category">
+      某某
+    </view>
+  </view>
+  <view class="center-wrapper">
+    <view class="article">
+      <view class="title">有关中台的误解以及精选中台解读6篇（阿里腾讯小米等）</view>
+      <view class="desc">有关中台的争议以及讨论从去年一直在持续... 那么，什么是中台，为什么要建中台，以及如何建中台？有没有说得比较清楚的，还是需要找50篇资料（文章）仍不得其法？笔者尝试从5篇资料中寻找答案。 网传的一种说法，是阿里高管15年参观世界上最成功的移动游戏公司supercell，这家典…</view>
+    </view>
+    <image src="/assets/img/default_user.jpg"></image>
+  </view>
+  <view class="bottom-wrapper">
+    <view class="love">
+      <image src="/assets/img/ic_dynamic_collect.png"></image>
+      <text>喜欢</text>
+    </view>
+    <view class="comment">
+      <image src="/assets/img/ic_dynamic_comment.png"></image>
+      <text>评论</text>
+    </view>
+  </view>
+</view>
