@@ -1,0 +1,39 @@
+@import '/wxParse/wxParse.wxss';
+
+.desc-wrapper {
+  padding: 20rpx;
+}
+
+.desc-wrapper .top {
+  display: flex;
+}
+
+.desc-wrapper .top image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.desc-wrapper .top .time {
+  margin-top: 40rpx;
+  font-size: 24rpx;
+}
+
+.desc-wrapper .top .time text:nth-child(1) {
+  color: tomato;
+}
+
+.desc-wrapper .top .time text:nth-child(2) {
+  color: #71777C;
+  margin-left: 20rpx;
+}
+
+.desc-wrapper .bot {
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20rpx;
+}

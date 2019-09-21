@@ -48,20 +48,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
-					"name": "登录",
-					"pathName": "pages/login/login",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/mine/mine",
-					"query": "",
+					"name": "详情",
+					"pathName": "pages/articleDetail/articleDetail",
+					"query": "entryIds= 5d85ea63f265da03a53a7338",
 					"scene": null
 				}
 			]

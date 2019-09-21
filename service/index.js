@@ -73,9 +73,37 @@ let getHotRecommend = (url, params) => {
   });
 };
 
+// 文章摘要
+let DESC_BASE = 'https://timeline-merger-ms.juejin.im/v1';
+let getArticleDesc = (url, params) => {
+  return myAjax({
+    url: DESC_BASE + url,
+    data: {
+      src: 'web',
+      entryIds: params.entryIds
+    },
+    method: 'GET'
+  });
+};
+
+// 文章正文
+let CONT_BASE = 'https://entry-view-storage-api-ms.juejin.im/v1';
+let getArticleContent = (url, params) => {
+  return myAjax({
+    url: CONT_BASE + url,
+    data: {
+      src: 'web',
+      entryId: params.entryId
+    },
+    method: 'GET'
+  });
+};
+
 module.exports = {
   userLogin: userLogin,
   getUserInfo: getUserInfo,
   getUserMsgCount: getUserMsgCount,
-  getHotRecommend: getHotRecommend
+  getHotRecommend: getHotRecommend,
+  getArticleContent: getArticleContent,
+  getArticleDesc: getArticleDesc
 };

@@ -1,6 +1,6 @@
 <wxs module="filter" src="./../../filter/filter.wxs"></wxs>
 
-<view class="article-wrapper" hover-class="hover-class">
+<view class="article-wrapper" hover-class="hover-class" catchtap="jumpToDetail" data-article="{{article}}">
   <view class="top-wrapper">
     <view class="user">
       <image src="{{filter.changeImageSrc(article.user.avatarLarge)}}"></image>

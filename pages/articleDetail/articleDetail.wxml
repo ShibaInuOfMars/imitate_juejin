@@ -1,0 +1,26 @@
+<wxs module="filter" src="./../../filter/filter.wxs"></wxs>
+
+<import src="./../../wxParse/wxParse.wxml" />
+
+<view class="desc-wrapper">
+  <view class="top">
+    <image src="{{filter.changeImageSrc(entryList[0].user.avatarLarge)}}"></image>
+    <view class="info">
+      <text>{{entryList[0].user.username}}</text>
+      <view class="time">
+        <text>{{filter.timeTransform(entryList[0].createdAt)}}</text>
+        <text>阅读 {{entryList[0].viewsCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="bot">
+    {{entryList[0].title}}
+  </view>
+</view>
+
+<!-- 模板加载HTML页面  -->
+<view class="content">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view> 
+
+

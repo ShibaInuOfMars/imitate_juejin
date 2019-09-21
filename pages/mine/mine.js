@@ -47,7 +47,7 @@ Page({
       current_uid: auth.userId
     });
 
-    console.log(res);
+    // console.log(res);
 
     if (res.data.s === 1 && res.data.d) {
       this.data.userInfo = res.data.d;
@@ -70,7 +70,7 @@ Page({
       token: auth.token
     });
 
-    console.log(res);
+    // console.log(res);
     if (res.data.s === 1) {
       this.data.messageCount = res.data.d && res.data.d.notification_num;
       this.setData(this.data);
