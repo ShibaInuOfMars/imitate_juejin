@@ -43,6 +43,7 @@ Page({
         this.data.articleList = [...res.data.d.entrylist];
         this.setData(this.data);
         wx.hideLoading();
+        wx.stopPullDownRefresh();
       } else {
         this.data.articleList = [...this.data.articleList, ...res.data.d.entrylist];
         this.setData(this.data);
@@ -61,13 +62,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    this.reqArticleData(true);
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    this.reqArticleData(false);
   }
 })
