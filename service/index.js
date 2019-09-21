@@ -57,8 +57,25 @@ let getUserMsgCount = (url, params) => {
   });
 };
 
+// 获取推荐内容
+let HOT_BASE = 'https://timeline-merger-ms.juejin.im/v1';
+let getHotRecommend = (url, params) => {
+  return myAjax({
+    url: HOT_BASE + url,
+    data: {
+      src: 'web', 
+      limit: params.limit, 
+      category: 'all', 
+      recomment: 1, 
+      before: params.before
+    },
+    method: 'GET'
+  });
+};
+
 module.exports = {
   userLogin: userLogin,
   getUserInfo: getUserInfo,
-  getUserMsgCount: getUserMsgCount
+  getUserMsgCount: getUserMsgCount,
+  getHotRecommend: getHotRecommend
 };

@@ -18,6 +18,7 @@ function myAjax(options) {
       fail: (err) => {
         wx.showToast({
           title: '网络异常，请稍后再试',
+          icon: 'none'
         });
       }
     });

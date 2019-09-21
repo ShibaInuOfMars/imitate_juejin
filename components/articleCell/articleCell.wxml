@@ -1,28 +1,60 @@
+<wxs module="filter" src="./../../filter/filter.wxs"></wxs>
+
 <view class="article-wrapper">
   <view class="top-wrapper">
     <view class="user">
-      <image src="/assets/img/default_user.jpg"></image>
-      <text>xx</text>
+      <image src="{{filter.changeImageSrc(article.user.avatarLarge)}}"></image>
+      <text>{{article.user.username}}</text>
     </view>
     <view class="category">
-      某某
+      {{filter.showTwoTags(article.tags, 'title', '/')}}
     </view>
   </view>
   <view class="center-wrapper">
     <view class="article">
-      <view class="title">有关中台的误解以及精选中台解读6篇（阿里腾讯小米等）</view>
-      <view class="desc">有关中台的争议以及讨论从去年一直在持续... 那么，什么是中台，为什么要建中台，以及如何建中台？有没有说得比较清楚的，还是需要找50篇资料（文章）仍不得其法？笔者尝试从5篇资料中寻找答案。 网传的一种说法，是阿里高管15年参观世界上最成功的移动游戏公司supercell，这家典…</view>
+      <view class="title">{{article.title}}</view>
+      <view class="desc">{{article.content}}</view>
     </view>
-    <image src="/assets/img/default_user.jpg"></image>
+    <image wx:if="{{article.screenshot}}" src="{{filter.changeIndexImageSrc(article.screenshot)}}"></image>
   </view>
   <view class="bottom-wrapper">
     <view class="love">
       <image src="/assets/img/ic_dynamic_collect.png"></image>
-      <text>喜欢</text>
+      <text>{{article.collectionCount || '喜欢'}}</text>
     </view>
     <view class="comment">
       <image src="/assets/img/ic_dynamic_comment.png"></image>
-      <text>评论</text>
+      <text>{{article.commentsCount || '评论'}}</text>
     </view>
   </view>
 </view>
+
+<!-- <wxs module="filter" src="./../../filter/filter.wxs"></wxs>
+<view class="item" hover-class="hover-class" catchtap="toArticleDetail" data-item="{{item}}">
+  <view class="header">
+     <view class="name">
+        <image src="{{filter.changeImageSrc(item.user.avatarLarge)}}"></image>
+        <view>{{item.user.username}}</view>
+     </view>
+     <view class="type">{{filter.joinStr(item.tags, 'title', ' / ')}}</view>
+  </view>
+  <view class="content">
+     <view class="text">
+       <view class="title">{{item.title}}</view>
+       <view class="desc">{{item.content || item.summaryInfo}}</view>
+     </view>
+     <image wx:if="{{item.screenshot}}" class="img" src="{{filter.changeIndexImageSrc(item.screenshot)}}"></image>
+  </view>
+  <view class="footer">
+     <view class="label">
+        <image src="/assets/img/ic_dynamic_collect.png"></image>
+        <view>{{item.collectionCount || '喜欢'}}</view>
+     </view>
+     <view class="label">
+        <image src="/assets/img/ic_dynamic_comment.png"></image>
+        <view>{{item.commentsCount || '评论'}}</view>
+     </view>
+  </view>
+</view> -->
+
+

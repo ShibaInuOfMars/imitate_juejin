@@ -1,45 +1,60 @@
+const regeneratorRuntime = require("./../../utils/runtime.js");
+
+let { getHotRecommend } = require('./../../service/index.js');
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
+    page_size: 20, // 上拉每次添加的条数
+    articleList: [] // 文章数据
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  onShow() {
+    // 没有数据的时候才加载
+    if (this.data.articleList.length === 0) {
+      this.reqArticleData(true);
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
+  // 请求文章列表数据
+  async reqArticleData(flag) {
+    let articleList = this.data.articleList;
+    let beforeIndex = null;
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+    // 1. 判断是上拉还是下拉
+    if (flag || articleList.length === 0) { // 下拉
+      beforeIndex = '';
+    } else { // 上拉
+      beforeIndex = articleList.slice(-1)[0].verifyCreatedAt || '';
+    }
     
-  },
+    wx.showLoading({
+      title: '加载中',
+    });
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
+    // 发送请求
+    let res = await getHotRecommend('/get_entry_by_timeline', {
+      limit: this.data.page_size,
+      before: beforeIndex
+    });
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
+    if (res.data.s === 1) {
+      if (flag) {
+        this.data.articleList = [...res.data.d.entrylist];
+        this.setData(this.data);
+        wx.hideLoading();
+      } else {
+        this.data.articleList = [...this.data.articleList, ...res.data.d.entrylist];
+        this.setData(this.data);
+        wx.hideLoading();
+      }
+    } else {
+      wx.hideLoading();
+      wx.showToast({
+        title: res.data.m,
+        icon: 'none'
+      });
+    }
   },
 
   /**
@@ -53,13 +68,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
     
   }
 })

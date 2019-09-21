@@ -5,11 +5,36 @@ function changeImageSrc(src) {
   }
   if (src.indexOf('?w=') !== -1) {
     return '/assets/img/default_user.jpg';
+  } else if (src.indexOf('user-gold-cdn.xitu.io') !== -1) {
+    return '/assets/img/default_user.jpg';
   } else {
     return src;
   }
 };
 
+function changeIndexImageSrc(src) {
+  if (!src) {
+    return '/assets/img/ic_login_logo.png';
+  }
+  if (src.indexOf('?w=') !== -1) {
+    return '/assets/img/ic_login_logo.png';
+  } else {
+    return src;
+  }
+};
+
+// 显示数组中的前两个
+function showTwoTags(arr, tag, str) {
+    var tArr = arr || [];
+    tArr = tArr.slice(0, 2).map(function (item) {
+      return item[tag];
+    });
+
+    return tArr.join(str);
+}
+
 module.exports = {
-  changeImageSrc: changeImageSrc
+  changeImageSrc: changeImageSrc,
+  changeIndexImageSrc: changeIndexImageSrc,
+  showTwoTags: showTwoTags
 };
