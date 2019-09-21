@@ -84,8 +84,14 @@ Page({
 
   // 跳转到登录页面
   jumpToLogin() {
+    let url = '';
+    if (!this.data.auth) { // 未登录
+      url = '/pages/login/login';
+    } else { // 已登录
+      url = '/pages/personal/personal'
+    }
     wx.navigateTo({
-      url: '/pages/login/login'
+      url: url
     });
   }
 })

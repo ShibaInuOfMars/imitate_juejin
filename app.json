@@ -5,7 +5,8 @@
     "pages/search/search",
     "pages/brochure/brochure",
     "pages/mine/mine",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "dark",
